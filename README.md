@@ -1,6 +1,6 @@
 # Intelligent CKD Diagnostic System
 
-Our work on CKD entitled [An Intelligent Diagnostic System to Analyze Early‐Stage Chronic Kidney Disease for Clinical Application](https://onlinelibrary.wiley.com/doi/full/10.1155/2023/3140270) published in a reputable journal "Applied Computational Intelligence and Sot Computing" in 2023, we decided to share the code and data we used for this experiment.
+Our work on CKD entitled [An Intelligent Diagnostic System to Analyze Early‐Stage Chronic Kidney Disease for Clinical Application](https://onlinelibrary.wiley.com/doi/full/10.1155/2023/3140270) published in a reputable journal "Applied Computational Intelligence and Sot Computing (IF: 3.88)" in 2023, we decided to share the code and data we used for this experiment.
 
 ## Abstract
 
