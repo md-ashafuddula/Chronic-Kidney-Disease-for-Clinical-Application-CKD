@@ -31,8 +31,8 @@ Average model processing time comparison for the proposed model with and without
 ## Reference Paper
 
 We use the dataset from [UCI Machine Learning Repository](https://archive.ics.uci.edu/datasets)
-1. (CKD-15)[https://archive.ics.uci.edu/dataset/336/chronic+kidney+disease]
-2. (CKD-21)[https://archive.ics.uci.edu/dataset/857/risk+factor+prediction+of+chronic+kidney+disease]
+1. [CKD-15](https://archive.ics.uci.edu/dataset/336/chronic+kidney+disease)
+2. [CKD-21](https://archive.ics.uci.edu/dataset/857/risk+factor+prediction+of+chronic+kidney+disease)
 
 **Please cite our paper:**
 
