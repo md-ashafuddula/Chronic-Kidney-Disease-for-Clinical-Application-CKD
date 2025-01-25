@@ -48,3 +48,42 @@ We use the dataset from [UCI Machine Learning Repository](https://archive.ics.uc
   publisher={Wiley Online Library}
 }
 ```
+
+
+# Extensions
+
+When applying PCA to a single patient's features to make a prediction about their disease, need to use the same PCA transformation that was learned from the training data.
+
+The first step would be to extract the features of the patient, in the case of i.e. lung cancer, the features could be age, smoking history, lab test results etc. Once the features are extracted, then need to preprocess them in the same way that already preprocessed the training data, i.e. normalize the data or handle any missing values.
+
+Then you would use the principal components (PC) (the directions of maximum variance in the data) and the corresponding eigenvalues that were learned from the training data to project the patient's data onto the same subspace as the training data. This would involve a dot product between the patient's feature and the principal components.
+
+Finally, the transformed patient's feature may use as input to the trained model to make a prediction about whether or not the patient has the disease.
+
+
+```
+from sklearn.decomposition import PCA
+import numpy as np
+
+# Say training data is in 'X_train'
+# Learn the PCA transformation on the trian data
+pca = PCA()
+pca.fit(X_train)
+
+# Extract the patient's features
+patient_features = [65, 1, 0.5, ...]  # Example features for a patient
+
+# Preprocess the patient's data in the same way as the training data
+patient_features_preprocessed = preprocess(patient_features)
+
+# Project the patient's data onto the same subspace as the training data
+patient_features_transformed = pca.transform(patient_features_preprocessed)
+
+# Predict disease presence using the trained model with the transformed patient data as input
+prediction = model.predict(patient_features_transformed)
+
+# check patient's probability having the disease
+probability = model.predict_proba(patient_features_transformed)
+
+```
+
