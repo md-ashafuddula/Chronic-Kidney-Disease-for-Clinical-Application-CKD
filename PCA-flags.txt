@@ -1,0 +1,10 @@
+Utilizing Principal Component Analysis (PCA) in a real-life project can be a bit more complex than using it in a research setting because of the difference in the number of features between the training and deployment stages.
+
+Ways to handle this issue:
+
+Retraining the model: After reducing the dimensionality of the dataset with PCA and training the model, you can retrain the model on the full-dimensional dataset before deploying it in the real-life project. 
+This way, the model will be able to handle instances with more features.
+
+Projecting new instances: Once you've obtained the principal components from PCA, you can use them to project new instances with more features into the lower-dimensional space. This can be done by computing the 
+dot product of the new instances and the projection matrix, which you can obtain from PCA. However, it's important to keep in mind that projecting new instances into a lower-dimensional space will inevitably lead 
+to some information loss.
